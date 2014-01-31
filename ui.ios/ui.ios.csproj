@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A4E12999-BE97-4869-87B2-6DF9B0C7189C}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -110,4 +110,10 @@
     <InterfaceDefinition Include="ui_iosViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpBindingProject\CSharpBindingProject.csproj">
+      <Project>{268E2563-67F7-4FC5-A65D-1820C0C488CF}</Project>
+      <Name>CSharpBindingProject</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

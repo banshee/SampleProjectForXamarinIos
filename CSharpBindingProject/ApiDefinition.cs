@@ -6,6 +6,13 @@ using MonoTouch.UIKit;
 
 namespace CSharpBindingProject
 {
+	[BaseType (typeof(NSObject))]
+	interface SampleNativeObjCObject
+	{
+		[Export ("returnThisString:")]
+		string returnThisString (String s);
+	}
+
 	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
 	// to the project by right-clicking (or Control-clicking) the folder containing this source
 	// file and clicking "Add files..." and then simply select the native library (or libraries)

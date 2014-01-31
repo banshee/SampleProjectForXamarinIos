@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{268E2563-67F7-4FC5-A65D-1820C0C488CF}</ProjectGuid>
     <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -46,4 +46,14 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="..\lib\libSampleNativeProject.a">
+      <Link>libSampleNativeProject.a</Link>
+    </ObjcBindingNativeLibrary>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="libSampleNativeProject.linkwith.cs">
+      <DependentUpon>libSampleNativeProject.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
