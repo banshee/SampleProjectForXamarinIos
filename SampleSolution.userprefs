@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.James Moore’s iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpBindingProject/ApiDefinition.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs">
     <Files>
-      <File FileName="CSharpBindingProject/ApiDefinition.cs" Line="10" Column="18" />
+      <File FileName="CSharpBindingProject/ApiDefinition.cs" Line="19" Column="27" />
       <File FileName="CSharpBindingProject/StructsAndEnums.cs" Line="6" Column="1" />
-      <File FileName="FSharpBindingProject/ApiDefinition.fs" Line="9" Column="47" />
+      <File FileName="ui.ios/Main.cs" Line="19" Column="22" />
+      <File FileName="CSharpBindingProject/libSampleNativeProject.linkwith.cs" Line="5" Column="1" />
+      <File FileName="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs" Line="48" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
