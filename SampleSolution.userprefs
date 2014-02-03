@@ -1,12 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="core.host/TimerService.fs">
     <Files>
-      <File FileName="CSharpBindingProject/ApiDefinition.cs" Line="19" Column="27" />
-      <File FileName="CSharpBindingProject/StructsAndEnums.cs" Line="6" Column="1" />
-      <File FileName="ui.ios/Main.cs" Line="19" Column="22" />
-      <File FileName="CSharpBindingProject/libSampleNativeProject.linkwith.cs" Line="5" Column="1" />
-      <File FileName="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs" Line="48" Column="38" />
+      <File FileName="ui.ios/Main.cs" Line="1" Column="1" />
+      <File FileName="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs" Line="1" Column="1" />
+      <File FileName="core.host/Component1.fs" Line="1" Column="1" />
+      <File FileName="core.host/AssemblyInfo.fs" Line="1" Column="1" />
+      <File FileName="core.host/TimerService.fs" Line="2" Column="1" />
+      <File FileName="core.host/ServiceSupport.fs" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

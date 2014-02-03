@@ -110,10 +110,4 @@
     <InterfaceDefinition Include="ui_iosViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\CSharpBindingProject\CSharpBindingProject.csproj">
-      <Project>{268E2563-67F7-4FC5-A65D-1820C0C488CF}</Project>
-      <Name>CSharpBindingProject</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
