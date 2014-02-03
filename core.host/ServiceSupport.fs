@@ -10,7 +10,8 @@ type ServiceInterface<'T, 'U> =
 
 type TimerCommand =
     | SetTimerView of ITimerView
-    | Tick of double
+    | Tick
+    | ResetTimer
 
 and ITimerView =
-    abstract SetTime: double -> unit
+    abstract SetTicks: int -> unit

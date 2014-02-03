@@ -8,19 +8,23 @@ type TimerService() =
     let rec waitingForView (mbox : MailboxProcessor<TimerCommand>) : Async<unit> = 
       async {
         let! msg = mbox.Receive()
+        let stay = waitingForView mbox
         match msg with
-        | Tick(x) ->
-            return! waitingForView mbox
         | SetTimerView v ->
-            return! serving mbox v
+            return! serving mbox v 0
+        | _ -> return! stay
       }
-    and serving (mbox : MailboxProcessor<TimerCommand>) (view: ITimerView) : Async<unit> =
+    and serving (mbox : MailboxProcessor<TimerCommand>) (view: ITimerView) count : Async<unit> =
       async {
         let! msg = mbox.Receive()
         match msg with
-        | Tick(x) ->
-            return! waitingForView mbox
+        | Tick ->
+            let newCount = count + 1
+            view.SetTicks(newCount)
+            return! serving mbox view (count + 1)
         | SetTimerView v ->
-            return! serving mbox v
+            return! serving mbox v count
+        | ResetTimer ->
+            return! serving mbox view 0
       }
     and actor: MailboxProcessor<TimerCommand> = MailboxProcessor.Start(waitingForView)

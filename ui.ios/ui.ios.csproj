@@ -105,9 +105,14 @@
     <Compile Include="ui_iosViewController.designer.cs">
       <DependentUpon>ui_iosViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimerViewController.cs" />
+    <Compile Include="TimerViewController.designer.cs">
+      <DependentUpon>TimerViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="ui_iosViewController.xib" />
+    <InterfaceDefinition Include="TimerStoryboard.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

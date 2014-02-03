@@ -6,8 +6,7 @@
       <File FileName="CSharpBindingProject/obj/Debug/ios/CSharpBindingProject/SampleNativeObjCObject.g.cs" Line="1" Column="1" />
       <File FileName="core.host/Component1.fs" Line="1" Column="1" />
       <File FileName="core.host/AssemblyInfo.fs" Line="1" Column="1" />
-      <File FileName="core.host/TimerService.fs" Line="2" Column="1" />
-      <File FileName="core.host/ServiceSupport.fs" Line="4" Column="1" />
+      <File FileName="core.host/TimerService.fs" Line="21" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
