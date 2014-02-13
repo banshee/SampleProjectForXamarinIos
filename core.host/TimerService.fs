@@ -1,8 +1,16 @@
 ﻿namespace com.example
 
-#nowarn "40"
+//#nowarn "40"
 
 open System
+
+type TimerCommand =
+    | SetTimerView of ITimerView
+    | Tick
+    | ResetTimer
+
+and ITimerView =
+    abstract SetTicks: int -> unit
 
 type TimerService() =
     let rec waitingForView (mbox : MailboxProcessor<TimerCommand>) : Async<unit> = 
@@ -28,3 +36,8 @@ type TimerService() =
             return! serving mbox view 0
       }
     and actor: MailboxProcessor<TimerCommand> = MailboxProcessor.Start(waitingForView)
+
+    member self.StartTimer() =
+      let timer = new System.Timers.Timer(float 1)
+      timer.AutoReset <- true
+      timer.Elapsed.Add (fun x -> printfn "xis %A" x)

@@ -4,13 +4,33 @@ using System;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Threading;
+
+using com.example;
 
 namespace ui.ios
 {
-	public partial class TimerViewController : UIViewController
+	public partial class TimerViewController : UIViewController, ITimerView
 	{
 		public TimerViewController (IntPtr handle) : base (handle)
 		{
+		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			ui.ios.AppDelegate appDelegate = UIApplication.SharedApplication.Delegate as ui.ios.AppDelegate;
+			if (appDelegate != null) {
+				TimerService timerService = appDelegate.GetTimerService ();
+				if (timerService != null) {
+					timerService.Actor.Post (com.example.TimerCommand.NewSetTimerView(this, SynchronizationContext.Current));
+				}
+			}
+		}
+
+		public void SetTicks(int x)
+		{
+			timerDisplay.Text = x.ToString ();
 		}
 	}
 }
