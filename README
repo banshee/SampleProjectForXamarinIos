@@ -1,0 +1,11 @@
+* Use 4.3.2 (build 2) version of Xamarin Studio (as of 13 Feb 2014).
+
+* Instructions for installing F# binding are here: http://fsharp.org/use/ios/.
+The short version: just install from the repo using normal XS tools. 
+
+* Make sure that you have two addins enabled:
+
+  Mobile Development > F# Support for Xamarin.iOS
+  Language Binding > F# Language Binding
+
+I've noticed that sometimes the language binding gets disabled when other addins are installed.  Just click the enable button again.
