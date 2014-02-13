@@ -9,3 +9,23 @@ The short version: just install from the repo using normal XS tools.
   Language Binding > F# Language Binding
 
 I've noticed that sometimes the language binding gets disabled when other addins are installed.  Just click the enable button again.
+
+* You need to include FSharp.Core and mscorlib from MonoTouch in the ui.ios project.  If you add them using the GUI, you'll end up 
+  with relative paths like this (and note the goofy Windows-style paths with backslashes instead of normal slashes):
+
+    <Reference Include="FSharp.Core">
+      <HintPath>..\..\..\..\..\Developer\MonoTouch\usr\lib\mono\2.1\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\..\..\..\..\Developer\MonoTouch\usr\lib\mono\2.1\mscorlib.dll</HintPath>
+    </Reference>
+
+I like to modify them (in a text editor) to be absolute:
+
+    <Reference Include="FSharp.Core">
+      <HintPath>\Developer\MonoTouch\usr\lib\mono\2.1\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>\Developer\MonoTouch\usr\lib\mono\2.1\mscorlib.dll</HintPath>
+    </Reference>
+

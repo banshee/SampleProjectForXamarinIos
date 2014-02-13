@@ -96,10 +96,10 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="FSharp.Core">
-      <HintPath>..\..\..\..\..\Developer\MonoTouch\usr\lib\mono\2.1\FSharp.Core.dll</HintPath>
+      <HintPath>\Developer\MonoTouch\usr\lib\mono\2.1\FSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>..\..\..\..\..\Developer\MonoTouch\usr\lib\mono\2.1\mscorlib.dll</HintPath>
+      <HintPath>\Developer\MonoTouch\usr\lib\mono\2.1\mscorlib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
