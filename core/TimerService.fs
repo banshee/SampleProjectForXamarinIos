@@ -8,6 +8,7 @@ type TimerCommand =
     | SetTimerView of ITimerView * Threading.SynchronizationContext
     | Tick
     | ResetTimer
+    | Syncronize of AsyncReplyChannel<bool>
 
 and ITimerView =
     abstract SetTicks: int -> unit
@@ -38,6 +39,9 @@ type TimerService() =
             return! serving mbox v c count
         | ResetTimer ->
             return! serving mbox view context 0
+        | TimerCommand.Syncronize replyChannel ->
+            replyChannel.Reply true
+            return! stay
       }
     and actor: MailboxProcessor<TimerCommand> = MailboxProcessor.Start(waitingForView)
 
