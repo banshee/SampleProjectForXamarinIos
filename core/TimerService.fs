@@ -4,6 +4,15 @@
 
 open System
 
+type TimerCommand =
+    | SetTimerView of ITimerView * Threading.SynchronizationContext
+    | Tick
+    | ResetTimer
+
+and ITimerView =
+    abstract SetTicks: int -> unit
+
+
 type TimerService() =
     let rec waitingForView (mbox : MailboxProcessor<TimerCommand>) : Async<unit> = 
       async {

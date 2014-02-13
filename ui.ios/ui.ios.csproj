@@ -127,7 +127,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\core.ios\core.ios.fsproj">
+    <ProjectReference Include="..\core\core.ios.fsproj">
       <Project>{4F8BB9E2-DBBC-408A-9B32-F1B8A7FB3C8F}</Project>
       <Name>core.ios</Name>
     </ProjectReference>

@@ -4,9 +4,12 @@ open System
 open NUnit.Framework
 
 [<TestFixture>]
-type Test() = 
-        [<Test>]
-        abstract TestCase : unit -> unit
-        [<Test>]
-        default this.TestCase  () =
-            ()
+type TimerServiceTest() = 
+  [<Test>]
+  member self.``demonstrate a failure``() =
+    Assert.That(false, Is.True)
+    ()
+
+  [<Test>]
+  member self.``Sending a tick calls the right method on the view``() =
+    ()

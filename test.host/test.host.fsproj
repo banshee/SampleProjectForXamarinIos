@@ -33,16 +33,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
-    <ProjectReference Include="..\core.host\core.host.fsproj">
-      <Project>{1736DD12-AE03-4AD9-91E0-6D0D12DB7B8E}</Project>
-      <Name>core.host</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
